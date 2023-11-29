@@ -16,6 +16,9 @@ export default function Home() {
   );
 }
 
-function LinkCard() {
-  return <a href=""></a>;
+function LinkCard({ href, title, image }) {
+  return (
+    <a href={href} className="flex items-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    </a>
+  );
 }
