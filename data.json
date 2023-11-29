@@ -1,0 +1,25 @@
+{
+  "name": "Amine Omari",
+  "avatar": "https://pbs.twimg.com/profile_images/1729192109020717056/gGgaMHV8_400x400.jpg",
+  "links": [
+    {
+        "title": "My personal site",
+        "href": "https://github.com/AMINEomari",
+        "image": "https://pbs.twimg.com/profile_images/1729192109020717056/gGgaMHV8_400x400.jpg"
+    },
+    {
+        "title": "Vercel.com",
+        "href": "https://vercel.com"
+    }
+  ],
+  "socials": [
+    {
+        "title": "Twitter",
+        "href": "https://twitter.com/Amine1Omari"
+    },
+    {
+        "title": "Github",
+        "href": "https://github.com/AMINEomari"
+    }
+  ]
+}
