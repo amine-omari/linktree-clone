@@ -6,8 +6,8 @@ export function TwitterIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 20"
-      width="40"
-      height="32"
+      width="30"
+      height="24"
       fill="currentColor"
     >
       <path fill="none" d="M0 0h24v24H0z"></path>
@@ -21,8 +21,8 @@ export function GithubIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="40"
-      height="40"
+      width="30"
+      height="30"
       fill="currentColor"
     >
       <path fill="none" d="M0 0h24v24H0z"></path>
@@ -79,14 +79,16 @@ export default function Home() {
       {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
       ))}
-      {data.socials.map((link) => {
-        if (link.href.includes("twitter")) {
-          return <TwitterIcon />;
-        }
-        if (link.href.includes("github")) {
-          return <GithubIcon />;
-        }
-      })}
+      <div className="flex gap-1 items-center">
+        {data.socials.map((link) => {
+          if (link.href.includes("twitter")) {
+            return <TwitterIcon />;
+          }
+          if (link.href.includes("github")) {
+            return <GithubIcon />;
+          }
+        })}
+      </div>
     </div>
   );
 }
