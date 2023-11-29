@@ -13,10 +13,10 @@ function LinkCard({
   return (
     <a
       href={href}
-      className="flex items-center p-4 w-full rounded-md hover:scale-105 transition-all border border-gray-300 mb-3"
+      className="flex items-center p-1 w-full rounded-md hover:scale-105 transition-all border border-gray-300 mb-3"
     >
-      <div className="flex flex-col text-center">
-        <h2 className="font-semibold">{title}</h2>
+      <div className="flex text-center">
+        <h2 className="font-semibold w-full text-center">{title}</h2>
       </div>
     </a>
   );
