@@ -16,9 +16,12 @@ export default function Home() {
   );
 }
 
-function LinkCard() {
+function LinkCard({ href, title, image}) {
   return (
-    <a href="">
+    <a href={href}>
+      <div>
+        <h2 className="font-bold text-lg">{title}</h2>
+      </div>
     </a>
   )
 }
