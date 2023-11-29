@@ -15,13 +15,3 @@ export default function Home() {
     </div>
   );
 }
-
-function LinkCard({ href, title, image}) {
-  return (
-    <a href={href}>
-      <div>
-        <h2 className="font-bold text-lg">{title}</h2>
-      </div>
-    </a>
-  )
-}
