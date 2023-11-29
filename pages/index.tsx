@@ -15,3 +15,7 @@ export default function Home() {
     </div>
   );
 }
+
+function LinkCard() {
+  return <a href=""></a>;
+}
