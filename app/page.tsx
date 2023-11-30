@@ -2,6 +2,9 @@ import Image from "next/image";
 import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic",
+  runtime = "edge";
+
 function TwitterIcon() {
   return (
     <svg
@@ -87,6 +90,7 @@ interface Social {
 
 export default async function HomePage() {
   const data: Data | undefined = await get("linktree");
+
   if (!data) {
     redirect("https://github.com/amine-omari");
   }
