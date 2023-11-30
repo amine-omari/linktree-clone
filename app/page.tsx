@@ -2,7 +2,7 @@ import Image from "next/image";
 import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
 
-export function TwitterIcon() {
+function TwitterIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ export function TwitterIcon() {
   );
 }
 
-export function GithubIcon() {
+function GithubIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
