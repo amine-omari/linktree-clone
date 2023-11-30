@@ -53,7 +53,7 @@ function LinkCard({
         <div className="w-10 h-10">
           {image && (
             <Image
-              className="rounded-sm"
+              className="rounded-sm h-10"
               src={image}
               alt={title}
               width={40}
