@@ -1,6 +1,7 @@
 import Image from "next/image";
 import data from "../data.json";
 
+
 export function TwitterIcon() {
   return (
     <svg
