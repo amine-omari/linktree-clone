@@ -65,6 +65,25 @@ function LinkCard({
   );
 }
 
+interface Data {
+  name: string;
+  avatar: string;
+  links: Link[];
+  socials: Social[];
+}
+
+interface Link {
+  href: string;
+  title: string;
+  image?: string;
+}
+
+interface Social {
+  href: string;
+  title: string;
+  image?: string;
+}
+
 export default async function HomePage() {
   const data: Data = await get("linktree");
 
