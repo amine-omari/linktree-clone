@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { get } from "@vercel/edge-config";
+import { redirect } from "next/navigation";
 
 export function TwitterIcon() {
   return (
@@ -85,7 +86,10 @@ interface Social {
 }
 
 export default async function HomePage() {
-  const data: Data = await get("linktree");
+  const data: Data | undefined = await get("linktree");
+  if (!data) {
+    redirect("https://github.com/amine-omari");
+  }
 
   return (
     <div className="flex flex-col items-center justify-center mx-auto w-full mt-16 px-8">
@@ -101,12 +105,12 @@ export default async function HomePage() {
         <LinkCard key={link.href} {...link} />
       ))}
       <div className="flex gap-4 items-center mt-8 text-white">
-        {data.socials.map((link) => {
-          if (link.href.includes("twitter")) {
-            return <TwitterIcon />;
+        {data.socials.map((social) => {
+          if (social.href.includes("twitter")) {
+            return <TwitterIcon key={social.href} />;
           }
-          if (link.href.includes("github")) {
-            return <GithubIcon />;
+          if (social.href.includes("github")) {
+            return <GithubIcon key={social.href} />;
           }
         })}
       </div>
