@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic",
 function TwitterIcon() {
   return (
     <svg
-      className="hover:opacity-80 hover:scale-105 duration-300 hover:cursor-pointer"
+      className="hover:opacity-80 hover:scale-105 duration-300"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 20"
       width="30"
@@ -24,7 +24,7 @@ function TwitterIcon() {
 function GithubIcon() {
   return (
     <svg
-      className="hover:opacity-80 hover:scale-105 duration-300 hover:cursor-pointer"
+      className="hover:opacity-80 hover:scale-105 duration-300"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       width="30"
@@ -113,10 +113,18 @@ export default async function HomePage() {
       <div className="flex gap-4 items-center mt-8 text-white">
         {data.socials.map((social) => {
           if (social.href.includes("twitter")) {
-            return <TwitterIcon key={social.href} />;
+            return (
+              <a href="https://twitter.com/Amine0mari">
+                <TwitterIcon key={social.href} />
+              </a>
+            );
           }
           if (social.href.includes("github")) {
-            return <GithubIcon key={social.href} />;
+            return (
+              <a href="https://github.com/amine-omari">
+                <GithubIcon key={social.href} />
+              </a>
+            );
           }
         })}
       </div>
