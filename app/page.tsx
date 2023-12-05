@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic",
 function TwitterIcon() {
   return (
     <svg
-      className="hover:opacity-80 hover:scale-105 duration-300"
+      className="hover:opacity-75 hover:scale-105 duration-300"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 20"
       width="30"
@@ -24,7 +24,7 @@ function TwitterIcon() {
 function GithubIcon() {
   return (
     <svg
-      className="hover:opacity-80 hover:scale-105 duration-300"
+      className="hover:opacity-75 hover:scale-105 duration-300"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       width="30"
