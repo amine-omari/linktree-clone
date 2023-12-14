@@ -69,7 +69,7 @@ function LinkCard({
   return (
     <a
       href={href}
-      className="flex items-center p-2 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-3 max-w-3xl"
+      className="flex items-center p-1.5 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-3 max-w-3xl"
     >
       <div className="flex text-center w-full">
         <div className="w-[50px] h-12">
@@ -143,6 +143,13 @@ export default async function HomePage() {
             return (
               <a href={social.href}>
                 <GithubIcon key={social.href} />
+              </a>
+            );
+          }
+          if (social.href.includes("tailwindcss")) {
+            return (
+              <a href={social.href}>
+                <TailwindIcon key={social.href} />
               </a>
             );
           }
