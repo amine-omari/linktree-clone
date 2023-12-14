@@ -147,6 +147,13 @@ export default async function HomePage() {
               </a>
             );
           }
+          if (social.href.includes("tailwindcss")) {
+            return (
+              <a href={social.href}>
+                <TailwindIcon key={social.href} />
+              </a>
+            );
+          }
         })}
       </div>
     </div>
