@@ -114,14 +114,14 @@ export default async function HomePage() {
         {data.socials.map((social) => {
           if (social.href.includes("twitter")) {
             return (
-              <a href="https://twitter.com/Amine0mari">
+              <a href={social.href}>
                 <TwitterIcon key={social.href} />
               </a>
             );
           }
           if (social.href.includes("github")) {
             return (
-              <a href="https://github.com/amine-omari">
+              <a href={social.href}>
                 <GithubIcon key={social.href} />
               </a>
             );
